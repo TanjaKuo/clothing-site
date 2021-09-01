@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+// high component, let moditify our components has access to thing related to redux
+
 import "./header.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
@@ -30,4 +33,12 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+const mapStatToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStatToProps)(Header);
+
+// higher component are just functions that take components as arguments,
+// and then for you turns suopped up components
+// second func is opeional and give us back another components that we pass it our header
