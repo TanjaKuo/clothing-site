@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 // high component, let moditify our components has access to thing related to redux
 
+import CartIcon from "../cart-icon/cart-icon";
+import CartDropdown from "../cart/cart-dropdown";
+
 import "./header.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 import { auth } from "../../firebase/firebase.utils";
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <Logo className="logo" />
@@ -29,12 +32,15 @@ const Header = ({ currentUser }) => (
           SING IN
         </Link>
       )}
+      <CartIcon />
     </div>
+    {hidden ? null : <CartDropdown />}
   </div>
 );
 
-const mapStatToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStatToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
 });
 
 export default connect(mapStatToProps)(Header);
