@@ -38,12 +38,12 @@ const Header = ({ currentUser, hidden }) => (
   </div>
 );
 
-const mapStatToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
   currentUser,
   hidden,
 });
 
-export default connect(mapStatToProps)(Header);
+export default connect(mapStateToProps)(Header);
 
 // higher component are just functions that take components as arguments,
 // and then for you turns suopped up components
