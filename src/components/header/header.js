@@ -16,9 +16,8 @@ import {
   LogoContainer,
   OptionalContainer,
   OptionLink,
-  OptionDiv,
 } from "./header.style";
-//import "./header.scss";
+//import "./header.scss"; replace by header.style.scss
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 const Header = ({ currentUser, hidden }) => (
