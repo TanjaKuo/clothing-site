@@ -9,17 +9,21 @@ import CheckoutPage from "./pages/checkout/checkout";
 
 import SignInAndSignUpPage from "./pages/signin-signup/signin-signup";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { onSnapshot, getDoc } from "firebase/firestore";
+
+import { onAuthStateChanged } from "firebase/auth";
 
 import { setCurrentUser } from "./redux/user/user.action";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
 import Header from "./components/header/header";
 
-class App extends Component {
+class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -30,9 +34,9 @@ class App extends Component {
             ...snapShot.data(),
           });
         });
-      } else {
-        setCurrentUser(userAuth);
       }
+
+      setCurrentUser(userAuth);
     });
   }
 
@@ -64,7 +68,6 @@ class App extends Component {
     );
   }
 }
-
 const mapStateToProps = (state) => ({
   currentUser: selectCurrentUser(state),
 });
