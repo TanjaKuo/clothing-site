@@ -77,5 +77,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-// function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
