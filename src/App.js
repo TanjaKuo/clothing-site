@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { createStructuredSelector } from "reselect";
+
 import { connect } from "react-redux";
 import "./App.css";
 
+import Header from "./components/header/header";
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shoppage";
 import CheckoutPage from "./pages/checkout/checkout";
 
 import SignInAndSignUpPage from "./pages/signin-signup/signin-signup";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import {
+  auth,
+  createUserProfileDocument,
+  addCollectionAndDocuments,
+} from "./firebase/firebase.utils";
 import { onSnapshot, getDoc } from "firebase/firestore";
 
 import { onAuthStateChanged } from "firebase/auth";
@@ -16,13 +23,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { setCurrentUser } from "./redux/user/user.action";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
-import Header from "./components/header/header";
+import { selectShopCollectionsForPreviews } from "./redux/shop/shop.selector";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, collectionsArray } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -37,6 +44,11 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
+      addCollectionAndDocuments(
+        "collection",
+        collectionsArray.map(({ title, items }) => ({ title, items }))
+      );
+      // mape -> so shop date everything will not show up, only return [] for the object we want to keep
     });
   }
 
@@ -70,6 +82,7 @@ class App extends React.Component {
 }
 const mapStateToProps = (state) => ({
   currentUser: selectCurrentUser(state),
+  collectionsArray: selectShopCollectionsForPreviews(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

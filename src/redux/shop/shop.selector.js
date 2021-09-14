@@ -35,10 +35,8 @@ collections.find(
       const createSelector () 
     }
   } 
-  
   const selectCollection(collectionUrlParam)(createSelection)
-  
-  
+
   */
 
 // collectionUrlParam is a func take collection id -- > selectCollection(ownProps.match.params.collectionId);
