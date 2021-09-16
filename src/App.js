@@ -80,9 +80,9 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
-  currentUser: selectCurrentUser(state),
-  collectionsArray: selectShopCollectionsForPreviews(state),
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  collectionsArray: selectShopCollectionsForPreviews,
 });
 
 const mapDispatchToProps = (dispatch) => ({
