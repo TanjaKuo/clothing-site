@@ -13,13 +13,13 @@ export const selectShopCollections = createSelector(
 export const selectShopCollectionsForPreviews = createSelector(
   [selectShopCollections],
   // convert object to array
-  (collections) => Object.keys(collections).map((key) => collections[key])
+  (collections) =>
+    collections ? Object.keys(collections).map((key) => collections[key]) : []
 );
 
 export const selectCollection = memoize((collectionUrlParam) =>
-  createSelector(
-    [selectShopCollections],
-    (collections) => collections[collectionUrlParam]
+  createSelector([selectShopCollections], (collections) =>
+    collections ? collections[collectionUrlParam] : null
   )
 );
 
