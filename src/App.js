@@ -11,11 +11,7 @@ import ShopPage from "./pages/shop/shoppage";
 import CheckoutPage from "./pages/checkout/checkout";
 
 import SignInAndSignUpPage from "./pages/signin-signup/signin-signup";
-import {
-  auth,
-  createUserProfileDocument,
-  addCollectionAndDocuments,
-} from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { onSnapshot, getDoc } from "firebase/firestore";
 
 import { onAuthStateChanged } from "firebase/auth";
@@ -23,15 +19,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { setCurrentUser } from "./redux/user/user.action";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
-import { selectShopCollectionsForPreviews } from "./redux/shop/shop.selector";
-
-class App extends React.Component {
+class App extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props;
+    const { setCurrentUser } = this.props;
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+    this.unsubscribeFromAuth = onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
@@ -44,11 +38,6 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
-      addCollectionAndDocuments(
-        "collection",
-        collectionsArray.map(({ title, items }) => ({ title, items }))
-      );
-      // mape -> so shop date everything will not show up, only return [] for the object we want to keep
     });
   }
 
@@ -82,7 +71,6 @@ class App extends React.Component {
 }
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  collectionsArray: selectShopCollectionsForPreviews,
 });
 
 const mapDispatchToProps = (dispatch) => ({
