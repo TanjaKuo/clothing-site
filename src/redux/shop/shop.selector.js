@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import memoize from "lodash.memoize";
-import { createStore } from "redux";
+//import { createStore } from "redux";
 
 // input selector
 const selectShop = (state) => state.shop;
