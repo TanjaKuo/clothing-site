@@ -1,5 +1,6 @@
 import { createSelector } from "reselect";
 import memoize from "lodash.memoize";
+import { createStore } from "redux";
 
 // input selector
 const selectShop = (state) => state.shop;
@@ -21,6 +22,16 @@ export const selectCollection = memoize((collectionUrlParam) =>
   createSelector([selectShopCollections], (collections) =>
     collections ? collections[collectionUrlParam] : null
   )
+);
+
+export const selectIsCollectionFetching = createSelector(
+  [selectShop],
+  (shop) => shop.isFetching
+);
+
+export const selectIsCollectionsLoaded = createSelector(
+  [selectShop],
+  (shop) => !!shop.collections
 );
 
 /* 
