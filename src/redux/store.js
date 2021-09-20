@@ -4,8 +4,8 @@ import { persistStore } from "redux-persist"; // allow browser to cache store
 //import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 
-import { fetchCollectionsStart } from "./shop/shop.sages";
 import rootReducer from "./root-reducer";
+import rootSaga from "../redux/root-saga";
 
 const sageMiddleware = createSagaMiddleware();
 
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "development") {
 //const store = createStore(rootReducer, appleMiddleware(logger)); if middleware only take one, can be write like this
 const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-sageMiddleware.run(fetchCollectionsStart);
+sageMiddleware.run(rootSaga);
 
 const persistor = persistStore(store);
 
