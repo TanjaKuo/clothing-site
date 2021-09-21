@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { auth } from "../../firebase/firebase.utils";
+//import { auth } from "../../firebase/firebase.utils";
 // high component, let moditify our components has access to thing related to redux
 import { createStructuredSelector } from "reselect";
 
@@ -10,6 +10,7 @@ import CartDropdown from "../cart/cart-dropdown";
 
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { signOutStart } from "../../redux/user/user.action";
 
 import {
   HeaderContainer,
@@ -20,7 +21,7 @@ import {
 //import "./header.scss"; replace by header.style.scss
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
-const Header = ({ currentUser, hidden }) => (
+const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className="logo" />
@@ -29,7 +30,7 @@ const Header = ({ currentUser, hidden }) => (
       <OptionLink to="/shop">SHOP</OptionLink>
       <OptionLink to="/shop">CONTACT</OptionLink>
       {currentUser ? (
-        <OptionLink as="div" onClick={() => auth.signOut()}>
+        <OptionLink as="div" onClick={signOutStart}>
           SIGN OUT
         </OptionLink>
       ) : (
@@ -46,16 +47,11 @@ const mapStateToProps = createStructuredSelector({
   hidden: selectCartHidden,
 });
 
-/*  above or this way
-const mapStateToProps = (state) => {
-  console.log("from header");
-  return {
-    currentUser: selectCurrentUser(state),
-    hidden: selectCartHidden(state),
-  };
-}; */
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart()),
+});
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
 // higher component are just functions that take components as arguments,
 // and then for you turns suopped up components
