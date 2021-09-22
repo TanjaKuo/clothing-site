@@ -1,7 +1,7 @@
 // move collection from action to saga
 // takeEvery -> listen for evry action of specific type that we pass to
 
-import { takeEvery, put, call, takeLatest } from "redux-saga/effects";
+import { all, put, call, takeLatest } from "redux-saga/effects";
 
 import {
   firestore,
@@ -42,4 +42,8 @@ export function* fetchCollectionsStart() {
     ShopActionTypes.FETCH_COLLECTIONS_START,
     fetchCollectionAsync
   );
+}
+
+export function* shopSaga() {
+  yield all([call(fetchCollectionsStart)]);
 }
