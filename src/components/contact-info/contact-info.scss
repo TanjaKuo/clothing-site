@@ -1,0 +1,42 @@
+@import "../../style/variables.scss";
+
+.contact-info-container {
+  width: 35vw;
+  margin-left: 2rem;
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+    margin-left: 0;
+  }
+  .contact-info {
+    padding: 3rem 3rem 1rem 3rem;
+    @media screen and (max-width: 800px) {
+      padding: 0;
+      padding-bottom: 1rem;
+    }
+  }
+  .info {
+    font-family: $fontFamily;
+    font-size: 1.25rem;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+    }
+    .icons {
+      margin-right: 1rem;
+    }
+  }
+  .social-icon {
+    padding-right: 0.3rem;
+    width: 2.6rem;
+    @media screen and (max-width: 800px) {
+      width: 1.6rem;
+    }
+  }
+  .map {
+    width: 30vw;
+    margin: 0 3rem;
+    @media screen and (max-width: 800px) {
+      margin: 0;
+      width: 30vw;
+    }
+  }
+}

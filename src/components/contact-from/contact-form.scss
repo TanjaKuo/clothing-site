@@ -1,0 +1,76 @@
+@import "../../style/variables.scss";
+
+.contact-form-container {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  width: 40vw;
+  height: auto;
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+    margin-left: -1rem;
+    margin-top: -2rem;
+  }
+  .contact-form {
+    margin: 2rem;
+    @media screen and (max-width: 800px) {
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    width: 27rem;
+    border: 2px solid $primaryColor;
+    &:first-child {
+      margin-top: 4rem;
+    }
+    @media screen and (max-width: 800px) {
+      margin: 0.5rem 1rem;
+      padding: 0.8rem 1rem;
+      width: 15rem;
+    }
+  }
+  .text {
+    height: 10rem;
+    @media screen and (max-width: 800px) {
+      height: 7rem;
+    }
+  }
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+
+  font-size: 1.2rem;
+  width: 27rem;
+  &:first-child {
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 800px) {
+    margin: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    width: 15rem;
+  }
+}
+.button {
+  background: $primaryColor;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: $fontFamily;
+  color: white;
+  &:hover {
+    background: #c0c3c3;
+    color: black;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0.5rem;
+  }
+}

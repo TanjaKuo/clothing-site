@@ -7,6 +7,8 @@ import { fetchCollectionsStart } from "../../redux/shop/shop.action";
 import CollectionOverviewContainer from "../../components/collection-overview/collection.overview.container";
 import CollectionPageContainer from "../collection/collectionpage.container";
 
+import "./shoppage.scss";
+
 class ShopPage extends Component {
   componentDidMount() {
     const { fetchCollectionsStart } = this.props;

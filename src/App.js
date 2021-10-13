@@ -8,6 +8,7 @@ import "./App.css";
 import Header from "./components/header/header";
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shoppage";
+import ContactPage from "./pages/contact/contactpage";
 import CheckoutPage from "./pages/checkout/checkout";
 import SignInAndSignUpPage from "./pages/signin-signup/signin-signup";
 
@@ -33,6 +34,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/contact" component={ContactPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact

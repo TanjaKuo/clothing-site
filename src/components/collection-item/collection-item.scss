@@ -1,3 +1,5 @@
+@import "../../style/variables.scss";
+
 .collection-item {
   width: 22vw;
   display: flex;
@@ -38,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-
+    font-family: $fontFamily;
     .name {
       width: 90%;
       margin-bottom: 15px;
@@ -47,5 +49,25 @@
     .price {
       width: 10%;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .collection-item {
+    width: 40vw;
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+      button {
+        opacity: unset;
+      }
+    }
+  }
+  .custom-button {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
   }
 }

@@ -37,3 +37,12 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .checkout-item {
+    font-size: 18px;
+  }
+  .price {
+    width: 22%;
+  }
+}
