@@ -79,10 +79,15 @@ Once fetch face data will return back to front end again.
 
 ## Screenshots
 
-### Register Page
+### Home Page
 
-![Register](https://github.com/TanjaKuo/face-detection/blob/main/doc/register.png)
-![Register](https://github.com/TanjaKuo/face-detection/blob/main/doc/register-mobile.png)
+![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home.png)
+![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home-mobile.png)
+
+### Home Page
+
+![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home.png)
+![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home-mobile.png)
 
 ### Sign In
 
