@@ -84,17 +84,32 @@ Once fetch face data will return back to front end again.
 ![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home.png)
 ![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home-mobile.png)
 
-### Home Page
+### Category Page
 
-![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home%20copy.png)
-![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home-mobile.png)
+![Category](https://github.com/TanjaKuo/clothing-site/blob/master/doc/category.png)
+![Category](https://github.com/TanjaKuo/clothing-site/blob/master/doc/category-mobile.png)
+
+### Shop Page
+
+![Shop](https://github.com/TanjaKuo/clothing-site/blob/master/doc/product.png)
+![Shop](https://github.com/TanjaKuo/clothing-site/blob/master/doc/product-mobile.png)
+
+### Contact Page
+
+![Contact](https://github.com/TanjaKuo/clothing-site/blob/master/doc/contact.png)
+![Contact](https://github.com/TanjaKuo/clothing-site/blob/master/doc/contact-mobile.png)
 
 ### Sign In
 
-![Sgnin](https://github.com/TanjaKuo/face-detection/blob/main/doc/sign-in.png)
-![SIgnin](https://github.com/TanjaKuo/face-detection/blob/main/doc/sign-in%20mobile.png)
+![Sgnin](https://github.com/TanjaKuo/clothing-site/blob/master/doc/signin.png)
+![SIgnin](https://github.com/TanjaKuo/clothing-site/blob/master/doc/signin-mobile.png)
 
-### Face Detection Page - entry image url will detect face on the image
+### Checkout Page
 
-![Face](https://github.com/TanjaKuo/face-detection/blob/main/doc/face-detection.png)
-![Face](https://github.com/TanjaKuo/face-detection/blob/main/doc/face-detection-mobile.png)
+![Checkout](https://github.com/TanjaKuo/clothing-site/blob/master/doc/checkout.png)
+![Checkout](https://github.com/TanjaKuo/clothing-site/blob/master/doc/checkout-mobile.png)
+
+### Payment Page -
+
+![Payment](https://github.com/TanjaKuo/clothing-site/blob/master/doc/payment.png)
+![Payment](https://github.com/TanjaKuo/clothing-site/blob/master/doc/payment-mobile.png)
