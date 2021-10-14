@@ -16,7 +16,6 @@ class ShopLocation extends Component {
 
   render() {
     return (
-      // Important! Always set the container height explicitly
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={
