@@ -1,0 +1,19 @@
+.directory-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  .directory-menu {
+    padding: 0;
+    display: block;
+  }
+}
+/*# sourceMappingURL=directory.css.map */

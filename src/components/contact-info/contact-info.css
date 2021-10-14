@@ -1,0 +1,61 @@
+.contact-info-container {
+  width: 35vw;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info-container {
+    width: 80vw;
+    margin-left: 0;
+  }
+}
+
+.contact-info-container .contact-info {
+  padding: 3rem 3rem 1rem 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info-container .contact-info {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+}
+
+.contact-info-container .info {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info-container .info {
+    font-size: 1rem;
+  }
+}
+
+.contact-info-container .info .icons {
+  margin-right: 1rem;
+}
+
+.contact-info-container .social-icon {
+  padding-right: 0.3rem;
+  width: 2.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info-container .social-icon {
+    width: 1.6rem;
+  }
+}
+
+.contact-info-container .map {
+  width: 30vw;
+  margin: 0 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-info-container .map {
+    margin: 0;
+    width: 30vw;
+  }
+}
+/*# sourceMappingURL=contact-info.css.map */

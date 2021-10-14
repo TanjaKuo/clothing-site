@@ -1,0 +1,110 @@
+.contact-form-container {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  width: 40vw;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form-container {
+    width: 80vw;
+    margin-left: -1rem;
+    margin-top: -2rem;
+  }
+}
+
+.contact-form-container .contact-form {
+  margin: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form-container .contact-form {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-form-container .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 2rem;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  width: 27rem;
+  border: 2px solid #626767;
+}
+
+.contact-form-container .form-input:first-child {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form-container .form-input {
+    margin: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    width: 15rem;
+  }
+}
+
+.contact-form-container .text {
+  height: 10rem;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form-container .text {
+    height: 7rem;
+  }
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 2rem;
+  font-size: 1.2rem;
+  width: 27rem;
+}
+
+.btn:first-child {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 800px) {
+  .btn {
+    margin: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    width: 15rem;
+  }
+}
+
+.button {
+  background: #626767;
+  border-radius: 0.3rem;
+  border: none;
+  padding: 1rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+}
+
+.button:hover {
+  background: #c0c3c3;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .button {
+    padding: 0.5rem;
+  }
+}
+/*# sourceMappingURL=contact-form.css.map */

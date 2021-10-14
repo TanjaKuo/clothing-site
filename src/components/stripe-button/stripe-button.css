@@ -1,0 +1,16 @@
+.stripe-button-el {
+  background: white !important;
+}
+
+.stripe-button-el span {
+  background-image: none !important;
+  background-color: #626767 !important;
+  height: 45px !important;
+  padding: 6px 12px !important;
+}
+
+.stripe-button-el span:hover {
+  background-color: #c0c3c3 !important;
+  color: black !important;
+}
+/*# sourceMappingURL=stripe-button.css.map */
