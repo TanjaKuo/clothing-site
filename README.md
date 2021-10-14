@@ -81,7 +81,7 @@ Once fetch face data will return back to front end again.
 
 ### Home Page
 
-![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home.png)
+![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home%20copy.png)
 ![Home](https://github.com/TanjaKuo/clothing-site/blob/master/doc/home-mobile.png)
 
 ### Category Page
