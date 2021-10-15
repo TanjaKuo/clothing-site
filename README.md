@@ -1,6 +1,6 @@
 # Crwn Clothing Ltd
 
-### Published link: [Crwn Clothing Ltd](https://crwn-clothing-shop-company.herokuapp.com/)
+### Published link: [Crwn Clothing Ltd](https://cw-shop.herokuapp.com/)
 
 ## Purpose
 
@@ -37,45 +37,38 @@ Redux managment
 - Animations
 - Redxu
 - Redxu Saga
-- Stripe
+- Stripe Payment
 
 ### Server side
 
-- NodeJs ExpressJs
-- RestfulAPI
-- PostgreSQL
-- knex (for connecting DB and server)
-- bcrypt (for hashing password)
+- NodeJs ExpressJs (for Stripe payment)
+- Firebase Authentication (Google user sign up)
+- Firestore (Google & email user sign in and store products)
 
-### delopment && API
+### delopment
 
-- Clarifai
-- client side -- netilify
-- server side -- Heroku
+- client && server side -- Heroku
 
 ## Security
 
-- Clarifai's API key is an stored at Heroku as environment variable in order to seperate from back end server code.
-- Clarifai's API key is set after delopment.
-- Hash user's password with bcrypt.
-- Storing password and user name with different tables, in order to reduce risk of data.
+- Stripe's API key is set after delopment.
 
-## Roadmap - Front end -> Back end -> Database
+## Sitemap
 
-The route from frontend (sign in / register) to backend (server) and connect with postgreSQL and return back to frontend.
-
-![Roadmap](https://github.com/TanjaKuo/face-detection/blob/main/doc/full%20stack.png)
+![Sitemap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/site-map.png)
 
 ## Guide - How to use
 
-![Roadmap](https://github.com/TanjaKuo/face-detection/blob/main/doc/face-use.png)
+![Guide](https://github.com/TanjaKuo/clothing-site/blob/master/doc/how-to-use.png)
 
-## Connect API - Front end -> Back end -> Database
+## Roadmap- Front end -> Back end -> Database
+
+The route from frontend (sign in / register) to backend (server) and connect with postgreSQL and return back to frontend.
 
 The route from frontend (sign in / register) to backend (server) and connect with Clarifai Face Recognition API.
 Once fetch face data will return back to front end again.
 
-![Roadmap](https://github.com/TanjaKuo/face-detection/blob/main/doc/clarifai-api.png)
+![Roadmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/roadmap.png)
 
 ## Screenshots
 
