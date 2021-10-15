@@ -61,12 +61,15 @@ Redux managment
 
 ![Guide](https://github.com/TanjaKuo/clothing-site/blob/master/doc/how-to-use.png)
 
-## Roadmap- Front end -> Back end -> Database
+## Roadmap- Front end -> Back end / Firebase -> Firestore
 
-The route from frontend (sign in / register) to backend (server) and connect with postgreSQL and return back to frontend.
+User can choose either sign up with email or Google account, if user sign up with Google account then the data will send to firebase Authentication and also Firestore.
 
-The route from frontend (sign in / register) to backend (server) and connect with Clarifai Face Recognition API.
-Once fetch face data will return back to front end again.
+If user signs up with email, the email, password and name will be send to firebase Authentication, ONLY user uses the same email and password to sign in, the data will be stored in Firestore.
+
+Products are stored in Firestore which makes the frontend files smaller and no need worry. Besides, if in the future, there are more products need to display on the website, anyone who has accessed to firestoed can easily added or adjust items without write any code.
+
+Building a ExpressJs server to connect front end and Stripe payment, in order to make the payment.
 
 ![Roadmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/roadmap.png)
 
@@ -102,7 +105,7 @@ Once fetch face data will return back to front end again.
 ![Checkout](https://github.com/TanjaKuo/clothing-site/blob/master/doc/checkout.png)
 ![Checkout](https://github.com/TanjaKuo/clothing-site/blob/master/doc/checkout-mobile.png)
 
-### Payment Page -
+### Payment Page
 
 ![Payment](https://github.com/TanjaKuo/clothing-site/blob/master/doc/payment.png)
 ![Payment](https://github.com/TanjaKuo/clothing-site/blob/master/doc/payment-mobile.png)
