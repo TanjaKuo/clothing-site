@@ -79,15 +79,20 @@ There are two ways to Sign up to website, by email sign up and Google account.
 
 ### Sign Up:
 
-- require: user name, email, password, confire password (At first time to make sure user enter macth password)
-- roadmap: once user sign up and send data to firebase Authenication, firebase will automatically generate user UID and store user data in firebase Authenication for future comparison.
+- Require: User's name, email, password, confirm password (If user enter different password, will not able to sign up)
+- Roadmap: Once user sign up and send data to firebase Authenication, firebase Authenication will automatically generate user UID and store user data in firebase Authenication. Then user will return to home page.
 
 ### Sign Up:
 
-- require: user name, email, password, confire password (At first time to make sure user enter macth password)
-- roadmap: once user sign up and send data to firebase Authenication, firebase will automatically generate user UID and store user data in firebase Authenication for future comparison.
+- Require: User' email, password.
+- Roadmap: When user enter email and password, frontend will send data to firebase Authenication to compare if the user UID is matched in Firebase Authentication, if not, user is not able to sign in. In the meantime, Firestore will stoore user data, including email, created date and user UID in user table. Then user will return to home page.
 
-![Guide](https://github.com/TanjaKuo/clothing-site/blob/master/doc/how-to-use.png)
+### Google account Sign In:
+
+- Require: User's google account
+- Roadmap: User uses Google account to sign in and send data to Firebase Authentication and generate a new user in user table. Then user will return to home page.
+
+![Signinmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/firebase%20map.png)
 
 ## Screenshots
 
