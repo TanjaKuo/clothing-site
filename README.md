@@ -73,6 +73,22 @@ Building a ExpressJs server to connect front end and Stripe payment, in order to
 
 ![Roadmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/roadmap.png)
 
+## Sign in/Sign up - connect with Firebase Authentication/Firestore
+
+There are two ways to Sign up to website, by email sign up and Google account.
+
+### Sign Up:
+
+- require: user name, email, password, confire password (At first time to make sure user enter macth password)
+- roadmap: once user sign up and send data to firebase Authenication, firebase will automatically generate user UID and store user data in firebase Authenication for future comparison.
+
+### Sign Up:
+
+- require: user name, email, password, confire password (At first time to make sure user enter macth password)
+- roadmap: once user sign up and send data to firebase Authenication, firebase will automatically generate user UID and store user data in firebase Authenication for future comparison.
+
+![Guide](https://github.com/TanjaKuo/clothing-site/blob/master/doc/how-to-use.png)
+
 ## Screenshots
 
 ### Home Page
