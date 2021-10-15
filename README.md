@@ -92,7 +92,7 @@ There are two ways to Sign up to website, by email sign up and Google account.
 - Require: User's google account
 - Roadmap: User uses Google account to sign in and send data to Firebase Authentication and generate a new user in user table. Then user will return to home page.
 
-![Signinmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/firebase%20map.png)
+![Signinmap](https://github.com/TanjaKuo/clothing-site/blob/master/doc/firebase-map.png)
 
 ## Screenshots
 
